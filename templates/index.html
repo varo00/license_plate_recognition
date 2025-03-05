@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento de Matrículas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Reconocimiento de Matrículas en Imágenes</h1>
+        
+        <div class="upload-container" id="drop-area">
+            <p>Arrastra y suelta una imagen o</p>
+            <label for="fileInput" class="upload-btn">Seleccionar Imagen</label>
+            <input type="file" id="fileInput" accept=".jpg,.jpeg,.png" hidden>
+            <p class="file-info" id="fileInfo">Formatos aceptados: JPG, JPEG, PNG</p>
+        </div>
+        
+        <div class="preview-container">
+            <div class="image-preview">
+                <h3>Imagen Original</h3>
+                <div id="imagePreview"></div>
+            </div>
+            
+            <div class="result-container">
+                <h3>Resultado</h3>
+                <div id="resultBox">
+                    <p id="resultText">La matrícula detectada aparecerá aquí</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="history-container">
+            <h3>Historial de Matrículas</h3>
+            <ul id="plateHistory"></ul>
+        </div>
+    </div>
+    
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Procesando imagen...</p>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
