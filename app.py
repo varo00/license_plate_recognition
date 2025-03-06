@@ -7,6 +7,7 @@ from werkzeug.utils import secure_filename
 import re
 import logging
 
+# Cambiar esta ruta por la ubicación de Tesseract en tu sistema
 pytesseract.pytesseract.tesseract_cmd = r'C:\Users\alvarogg\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
 app = Flask(__name__)
