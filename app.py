@@ -7,6 +7,8 @@ from werkzeug.utils import secure_filename
 import re
 import logging
 
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\alvarogg\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload
